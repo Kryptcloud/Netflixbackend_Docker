@@ -10,7 +10,7 @@ RUN apt install maven -y
 WORKDIR /app
 
 #copy the application properties and source code to the container
-COPY application.properties /app/src/main/resources/application.properties
+COPY ./src/main/resources/application.properties /app/src/main/resources/application.properties
 COPY ./src /app/src
 COPY ./pom.xml /app
 
