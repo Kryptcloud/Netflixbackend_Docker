@@ -1,0 +1,21 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 817B done
+#1 DONE 0.0s
+
+#2 [auth] library/ubuntu:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/ubuntu:latest
+#3 ERROR: failed to do request: Head "https://registry-1.docker.io/v2/library/ubuntu/manifests/latest": net/http: TLS handshake timeout
+------
+ > [internal] load metadata for docker.io/library/ubuntu:latest:
+------
+Dockerfile:1
+--------------------
+   1 | >>> FROM ubuntu
+   2 |     
+   3 |     # Install necessary packages
+--------------------
+ERROR: failed to build: failed to solve: ubuntu: failed to resolve source metadata for docker.io/library/ubuntu:latest: failed to do request: Head "https://registry-1.docker.io/v2/library/ubuntu/manifests/latest": net/http: TLS handshake timeout
