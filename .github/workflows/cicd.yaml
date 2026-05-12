@@ -28,12 +28,12 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v2
 
 
-    - name: Docker build
-  run: |
-    mkdir -p src/main/resources
-    echo "${{ secrets.APPLICATION_PROPERTIES }}" > src/main/resources/application.properties
-    docker build -t netflix_backend:latest .
-    
+    - name: Docker build 
+      run: |
+        echo "${{ secrets.APPLICATION_PROPERTIES }}" > application.properties
+        # ls -la 
+        # cat application.properties
+        docker build -t netflix_backend:latest .
 
     - name: Docker push
       run: |
